@@ -1,0 +1,18 @@
+@use "./typography";
+
+// Colors
+$primary: #27fdf5;
+$secondary: #ff3daa;
+$backgroundColor: #455a64;
+
+// Fonts
+$primaryFontStack: "neon future", sans-serif;
+$secondaryFontStack: "staatliches", sans-serif;
+$tertiaryFontStack: Montserrat, sans-serif;
+
+// Break points
+$tinyBreak: "320px";
+$smallBreak: "500px";
+$mediumBreak: "767px";
+$largeBreak: "1024px";
+$xlBreak: "1200px";

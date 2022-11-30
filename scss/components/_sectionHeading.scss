@@ -1,0 +1,24 @@
+@use "../abstracts/variables";
+@use "../abstracts/breakpoints";
+
+.section-heading {
+  color: variables.$secondary;
+  font-family: variables.$primaryFontStack;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 5px 5px #000;
+  font-weight: 500;
+  letter-spacing: 0.25ch;
+  text-shadow: 5px 5px 5px variables.$secondary,
+    5px 5px 5px variables.$secondary, 5px 5px #000;
+  margin-bottom: 0.5em;
+
+  @include breakpoints.small {
+    font-size: 3rem;
+  }
+
+  @include breakpoints.medium {
+    font-size: 6rem;
+    margin: 0;
+  }
+}

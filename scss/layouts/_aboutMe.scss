@@ -1,0 +1,120 @@
+@use "../abstracts/variables";
+@use "../abstracts/breakpoints";
+
+.about-me {
+  margin-bottom: 10em;
+  min-height: 80vh;
+  &.hidden {
+    .about-me-inner {
+      translate: 0 100vh;
+      opacity: 0;
+    }
+  }
+
+  .about-me-inner {
+    transition: translate 0.3s linear, opacity 0.3s linear;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .introduction {
+      font-size: 3rem;
+      color: variables.$primary;
+      font-family: variables.$secondaryFontStack;
+      font-weight: 400;
+      text-align: center;
+      text-shadow: 5px 5px #000;
+    }
+    @include breakpoints.small {
+      .introduction {
+        font-size: 4rem;
+      }
+    }
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      img {
+        max-width: 100%;
+      }
+    }
+    .details {
+      display: flex;
+      justify-content: center;
+      .details-list {
+        .detail {
+          display: flex;
+          min-height: 3em;
+          .text {
+            line-height: 100%;
+            color: #fff;
+            font-family: variables.$secondaryFontStack;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+          }
+          @include breakpoints.small {
+            .text {
+              font-size: 1.6rem;
+            }
+          }
+          .emoji {
+            font-size: 1.5rem;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints.large {
+  .about-me .about-me-inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    min-height: 20em;
+    .introduction {
+      grid-column: 2;
+    }
+
+    .image-container {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      align-self: flex-start;
+      margin: 0;
+      img {
+        width: 100%;
+      }
+    }
+
+    .details {
+      grid-column: 2;
+      .details-list .detail {
+        min-height: 4rem;
+      }
+    }
+  }
+}
+
+@include breakpoints.xl {
+  .about-me .about-me-inner {
+    margin: 2em 2em 10em;
+    .introduction {
+      font-size: 6rem;
+    }
+
+    .details {
+      grid-column: 2;
+      .details-list .detail {
+        min-height: 6.5rem;
+        .text {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

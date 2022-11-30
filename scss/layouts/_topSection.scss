@@ -1,0 +1,143 @@
+@use "../abstracts/variables";
+@use "../abstracts/breakpoints";
+@use "sass:list";
+
+:root {
+  --titleFontSize: 2.5rem;
+  --subtitleFontSize: 2rem;
+
+  @include breakpoints.tiny {
+    --titleFontSize: 3rem;
+    --subtitleFontSize: 2.5rem;
+  }
+
+  @include breakpoints.small {
+    --titleFontSize: 4.5rem;
+    --subtitleFontSize: 3.5rem;
+  }
+
+  @include breakpoints.medium {
+    --titleFontSize: 6rem;
+    --subtitleFontSize: 5rem;
+  }
+
+  @include breakpoints.large {
+    --titleFontSize: 7rem;
+    --subtitleFontSize: 6rem;
+  }
+}
+
+.top {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30vh;
+
+  .text-container {
+    position: absolute;
+    height: 4em;
+    width: 100%;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+      font-size: var(--titleFontSize);
+      font-family: variables.$primaryFontStack;
+      font-weight: 500;
+      color: variables.$primary;
+      text-align: center;
+      text-shadow: 5px 5px 5px variables.$primary,
+        5px 5px 5px variables.$primary, 5px 5px #000;
+      letter-spacing: 0.25ch;
+      animation: blinkIn 5s linear;
+    }
+    .subtitle {
+      font-size: var(--subtitleFontSize);
+      font-family: variables.$primaryFontStack;
+      font-weight: 500;
+      color: variables.$secondary;
+      text-align: center;
+      text-shadow: 5px 5px 5px variables.$secondary,
+        5px 5px 5px variables.$secondary, 5px 5px #000;
+      letter-spacing: 0.25ch;
+      animation: blinkIn 5s linear;
+    }
+  }
+  .btn-container {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+
+    .scroll-btn {
+      cursor: pointer;
+      width: 5em;
+      height: 5em;
+      background: variables.$backgroundColor;
+      border-radius: 50%;
+      border: 2px solid variables.$secondary;
+      box-shadow: 4px 4px #000;
+      transition: 0.3s;
+      opacity: 0;
+      animation: appear 1s linear 2s forwards,
+        idleMovement 3s linear 4s infinite;
+
+      &:hover {
+        border-color: variables.$primary;
+        scale: 1.05;
+        .down-arrow {
+          color: variables.$secondary;
+          transition: 0.3s;
+        }
+      }
+
+      a {
+        display: block;
+
+        .down-arrow {
+          font-size: 2.5em;
+          color: variables.$primary;
+        }
+      }
+    }
+  }
+}
+
+$blinkInChanges: (
+  (15%, 0),
+  (20%, 1),
+  (25%, 0),
+  (30%, 1),
+  (35%, 0),
+  (40%, 1),
+  (48%, 1),
+  (50%, 0),
+  (55%, 1),
+  (100%, 1)
+);
+@keyframes blinkIn {
+  @each $change in $blinkInChanges {
+    #{list.nth($change, 1)} {
+      opacity: list.nth($change, 2);
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes idleMovement {
+  50% {
+    translate: 0 -5px;
+  }
+}
