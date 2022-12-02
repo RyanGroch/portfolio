@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <title>Ryan Groch - Portfolio</title>
+  <script defer src="./js/main.js"></script>
+  <link rel="stylesheet" href="/portfolio/assets/index.abeff4d5.css">
+</head>
+
+<body>
+  <header class="header static">
+    <nav class="nav">
+      <ul class="links-container">
+        <li class="nav-link nav-link-1"><a href="#about-me">About</a></li>
+        <li class="nav-link nav-link-2"><a href="#portfolio">Portfolio</a></li>
+        <li class="nav-link nav-link-3"><a href="#contact-me">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social-media-links">
+      <ul class="links-container">
+        <li class="social-media social-media-1">
+          <a href="https://github.com/Thrasymachuss" target="_blank">
+            <i class="icon fab fa-github-square"></i>
+            <span class="label">Github</span>
+          </a>
+        </li>
+        <li class="social-media social-media-2">
+          <a href="#">
+            <i class="icon fas fa-file-alt"></i>
+            <span class="label">Resume</span>
+          </a>
+        </li>
+        <li class="social-media social-media-3">
+          <a href="#">
+            <i class="icon fab fa-linkedin"></i>
+            <span class="label">LinkedIn</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <section class="top">
+    <div class="text-container">
+      <h1 class="title">R<span class="blinker-1">y</span>an Groch</h1>
+      <h2 class="subtitle">W<span class="blinker-2">e</span>b Dev<span class="blinker-3">e</span>loper</h2>
+    </div>
+    <div class="btn-container">
+      <button class="scroll-btn"><a href="#about-me"><i class="down-arrow fas fa-caret-down"></i></a></button>
+    </div>
+  </section>
+  <section class="about-me hidden" id="about-me">
+    <div class="about-me-inner">
+      <h2 class="introduction">Hey, I'm Ryan</h2>
+      <div class="image-container"><img src="/portfolio/assets/me.c11d6ef8.png" alt="Me"></div>
+      <div class="details">
+        <ul class="details-list">
+          <li class="detail"><span class="list-icon"><i class="fa fa-mobile-screen-button"></i></span><span
+              class="text">~2
+              years
+              of self-taught web-developer
+              experience
+            </span></li>
+          <li class="detail"><span class="list-icon"><i class="fab fa-react"></i></span><span class="text">Html, css,
+              sass,
+              javascript,
+              react</span></li>
+          <li class="detail"><span class="list-icon"><i class="fab fa-js"></i></span><span class="text">Next.js,
+              Express.js</span></li>
+          <li class="detail"><span class="list-icon"><i class="fab fa-wordpress"></i></span><span class="text">Content
+              Management Systems; Wordpress,
+              Strapi</span></li>
+          <li class="detail"><span class="list-icon"><i class="fab fa-python"></i></span><span class="text">Python,
+              numpy,
+              pandas,
+              matplotlib</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="portfolio" id="portfolio">
+    <h2 class="section-heading">Po<span class="blinker-1">r</span>tfolio</h2>
+    <div class="projects">
+      <article class="project hidden">
+        <div class="project-inner">
+          <div class="project-title-container">
+            <h3 class="project-title"><a href="https://thrasymachuss.github.io/othello-ai-v2/">Othello
+                AI</a></h3>
+          </div>
+          <div class="project-image-container"><a href="https://thrasymachuss.github.io/othello-ai-v2/"><img
+                src="/portfolio/assets/othello.f5aa3699.png" alt="Othello screenshot" /></a></div>
+          <p class="project-description">An app which allows the user to play Othello - a two player strategy game
+            comparable to Chess or Checkers. I wrote an AI
+            using the minimax algorithm, and the AI plays fairly well on higher difficulties.</p>
+          <p class="tools-used">React · Vite · Typescript</p>
+          <p class="project-links"><a href="https://thrasymachuss.github.io/othello-ai-v2/">Visit
+              App</a> | <a href="https://github.com/Thrasymachuss/othello-ai-v2">Source Code</a></p>
+        </div>
+      </article>
+      <article class="project hidden">
+        <div class="project-inner">
+          <div class="project-title-container">
+            <h3 class="project-title"><a href="https://link-shortener-thrasymachuss.vercel.app/">Turl - Link
+                Shortener</a></h3>
+          </div>
+          <div class="project-image-container"><a href="https://link-shortener-thrasymachuss.vercel.app/"><img
+                src="/portfolio/assets/turl.8336f27a.png" alt="Turl screenshot"></a></div>
+          <p class="project-description">A url shortener, much like Tinyurl or Bit.ly. It interacts with a MySQL
+            database
+            through Prisma to store and retrieve urls.
+          </p>
+          <p class="tools-used">Next.js · Typescript · Prisma · TailwindCSS</p>
+          <p class="project-links"><a href="https://link-shortener-thrasymachuss.vercel.app/">Visit App</a> | <a
+              href="https://github.com/Thrasymachuss/link-shortener">Source Code</a></p>
+        </div>
+      </article>
+      <article class="project hidden">
+        <div class="project-inner">
+          <div class="project-title-container">
+            <h3 class="project-title"><a href="https://thrasymachuss.github.io/sudoku-v2/">Sudoku Generator</a></h3>
+          </div>
+          <div class="project-image-container"><a href="https://thrasymachuss.github.io/sudoku-v2/"><img
+                src="/portfolio/assets/sudoku.1c25f8d1.png" alt="Sudoku screenshot"></a></div>
+          <p class="project-description">This app generates random Sudoku puzzles through recursive backtracking, and
+            allows the user to solve the puzzles. It can also
+            visualize the solving algorithm.</p>
+          <p class="tools-used">Vanilla JS · Vite · SASS</p>
+          <p class="project-links"><a href="https://thrasymachuss.github.io/sudoku-v2/">Visit App</a> | <a
+              href="https://github.com/Thrasymachuss/sudoku-v2">Source Code</a></p>
+        </div>
+      </article>
+      <article class="project hidden">
+        <div class="project-inner">
+          <div class="project-title-container">
+            <h3 class="project-title"><a href="https://thrasymachuss.github.io/logic-square/">LogicSquare</a></h3>
+          </div>
+          <div class="project-image-container"><a href="https://thrasymachuss.github.io/logic-square/"><img
+                src="/portfolio/assets/logicSquare.15f2174a.png" alt="LogicSquare screenshot"></a></div>
+          <p class="project-description">A logic-based puzzle game of my own invention, comparable to Sudoku. Uses a
+            recursive backtracking algorithm to generate
+            random puzzles and solve them, much like my Sudoku app. Also offers a visualization of the algorithm.</p>
+          <p class="tools-used">React · Typescript</p>
+          <p class="project-links"><a href="https://thrasymachuss.github.io/logic-square/">Visit App</a> | <a
+              href="https://github.com/Thrasymachuss/logic-square">Source Code</a></p>
+        </div>
+      </article>
+  </section>
+  <section class="contact-me" id="contact-me">
+    <h2 class="section-heading">C<span class="blinker-1">o</span>ntact Me</h2>
+    <div class="form-container">
+      <form class="contact-form" action="https://formsubmit.co/e135b400592435124a9c16ca224382e9" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input name="name" class="form-control" placeholder="Name*" required>
+        <input name="email" class="form-control" placeholder="Email*" required>
+        <input name="subject" class="form-control" placeholder="Subject">
+        <textarea class="form-control" placeholder="Your Message...*" name="message" rows="10" required></textarea>
+        <button class="contact-me-submit" type="submit">Submit Form</button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="tools-container">
+      <div class="project-tools">Built with <img src="/portfolio/assets/sass.292ce9f5.svg" alt="Sass" width="20" height="20" /> and <img
+          src="/portfolio/assets/vite.4a748afd.svg" alt="Vite" width="20" height="20" /></div>
+    </div>
+    <p class="inspiration">The visual design of this website was heavily inspired by <a
+        href="https://doriandominguez.com/">Dorian Dominguez's website</a></p>
+  </footer>
+</body>
+
+</html>
