@@ -78,7 +78,7 @@
     }
   }
 
-  @for $i from 1 through 2 {
+  @for $i from 1 through 3 {
     .social-media-#{$i} {
       scale: 0%;
       animation: growIn 0.5s ease-in #{3.5 + $i * 0.5}s forwards;

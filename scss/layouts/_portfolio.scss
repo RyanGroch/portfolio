@@ -39,11 +39,23 @@
           justify-content: center;
           align-items: center;
           .project-title {
+            width: min-content;
+
+            @include breakpoints.small {
+              width: auto;
+            }
+
             color: variables.$primary;
             font-family: variables.$secondaryFontStack;
             font-size: 3rem;
             font-weight: 400;
             border-bottom: 2px solid variables.$secondary;
+            text-align: center;
+
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
           }
         }
         .project-image-container {
@@ -74,6 +86,16 @@
           text-align: center;
           padding: 0.5em 1em;
           line-height: 1.8em;
+        }
+        .project-links {
+          color: variables.$primary;
+          text-align: center;
+          font-family: variables.$tertiaryFontStack;
+          font-size: 1.2rem;
+
+          a {
+            color: inherit;
+          }
         }
       }
     }

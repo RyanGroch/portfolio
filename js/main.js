@@ -1,5 +1,4 @@
 const navbar = document.querySelector(".header");
-console.log(navbar);
 const navbarHeight = navbar.offsetHeight;
 let lastScrollTop;
 

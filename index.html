@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
@@ -36,6 +35,12 @@
             <span class="label">Resume</span>
           </a>
         </li>
+        <li class="social-media social-media-3">
+          <a href="#">
+            <i class="icon fab fa-linkedin"></i>
+            <span class="label">LinkedIn</span>
+          </a>
+        </li>
       </ul>
     </div>
   </header>
@@ -51,19 +56,27 @@
   <section class="about-me hidden" id="about-me">
     <div class="about-me-inner">
       <h2 class="introduction">Hey, I'm Ryan</h2>
-      <div class="image-container"><img src="./images/imageOfMe2-removebg-preview.png" alt=""></div>
+      <div class="image-container"><img src="./images/me.png" alt="Me"></div>
       <div class="details">
         <ul class="details-list">
-          <li class="detail"><span class="emoji">💻</span><span class="text">~1 year of regular web
-              development
-              practice</span></li>
-          <li class="detail"><span class="emoji">👨‍💻</span><span class="text">~3 years of general
-              programming
-              experience</span></li>
-          <li class="detail"><span class="emoji">⚛️</span><span class="text">html, css, sass, javascript,
+          <li class="detail"><span class="list-icon"><i class="fa fa-mobile-screen-button"></i></span><span
+              class="text">~2
+              years
+              of self-taught web-developer
+              experience
+            </span></li>
+          <li class="detail"><span class="list-icon"><i class="fab fa-react"></i></span><span class="text">Html, css,
+              sass,
+              javascript,
               react</span></li>
-          <li class="detail"><span class="emoji">🐘</span><span class="text">PHP and Wordpress</span></li>
-          <li class="detail"><span class="emoji">📈</span><span class="text">Python, numpy, pandas,
+          <li class="detail"><span class="list-icon"><i class="fab fa-js"></i></span><span class="text">Next.js,
+              Express.js</span></li>
+          <li class="detail"><span class="list-icon"><i class="fab fa-wordpress"></i></span><span class="text">Content
+              Management Systems; Wordpress,
+              Strapi</span></li>
+          <li class="detail"><span class="list-icon"><i class="fab fa-python"></i></span><span class="text">Python,
+              numpy,
+              pandas,
               matplotlib</span></li>
         </ul>
       </div>
@@ -75,53 +88,64 @@
       <article class="project hidden">
         <div class="project-inner">
           <div class="project-title-container">
-            <h3 class="project-title">This Website</h3>
+            <h3 class="project-title"><a href="https://thrasymachuss.github.io/othello-ai-v2/">Othello
+                AI</a></h3>
           </div>
-          <div class="project-image-container"><img src="./images/laptop.png" alt=""></div>
-          <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, ullam
-            velit. Fugit voluptatibus eius tenetur excepturi, ratione nemo, illum veniam rerum voluptates
-            atque,
-            iste a?</p>
-          <p class="tools-used">SCSS · Parcel</p>
+          <div class="project-image-container"><a href="https://thrasymachuss.github.io/othello-ai-v2/"><img
+                src="./images/othello.png" alt="Othello screenshot" /></a></div>
+          <p class="project-description">An app which allows the user to play Othello - a two player strategy game
+            comparable to Chess or Checkers. I wrote an AI
+            using the minimax algorithm, and the AI plays fairly well on higher difficulties.</p>
+          <p class="tools-used">React · Vite · Typescript</p>
+          <p class="project-links"><a href="https://thrasymachuss.github.io/othello-ai-v2/">Visit
+              App</a> | <a href="https://github.com/Thrasymachuss/othello-ai-v2">Source Code</a></p>
         </div>
       </article>
       <article class="project hidden">
         <div class="project-inner">
           <div class="project-title-container">
-            <h3 class="project-title">This Website</h3>
+            <h3 class="project-title"><a href="https://link-shortener-thrasymachuss.vercel.app/">Turl - Link
+                Shortener</a></h3>
           </div>
-          <div class="project-image-container"><img src="./images/laptop.png" alt=""></div>
-          <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, ullam
-            velit. Fugit voluptatibus eius tenetur excepturi, ratione nemo, illum veniam rerum voluptates
-            atque,
-            iste a?</p>
-          <p class="tools-used">SCSS · Parcel</p>
+          <div class="project-image-container"><a href="https://link-shortener-thrasymachuss.vercel.app/"><img
+                src="./images/turl.png" alt="Turl screenshot"></a></div>
+          <p class="project-description">A url shortener, much like Tinyurl or Bit.ly. It interacts with a MySQL
+            database
+            through Prisma to store and retrieve urls.
+          </p>
+          <p class="tools-used">Next.js · Typescript · Prisma · TailwindCSS</p>
+          <p class="project-links"><a href="https://link-shortener-thrasymachuss.vercel.app/">Visit App</a> | <a
+              href="https://github.com/Thrasymachuss/link-shortener">Source Code</a></p>
         </div>
       </article>
       <article class="project hidden">
         <div class="project-inner">
           <div class="project-title-container">
-            <h3 class="project-title">This Website</h3>
+            <h3 class="project-title"><a href="https://thrasymachuss.github.io/sudoku-v2/">Sudoku Generator</a></h3>
           </div>
-          <div class="project-image-container"><img src="./images/laptop.png" alt=""></div>
-          <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, ullam
-            velit. Fugit voluptatibus eius tenetur excepturi, ratione nemo, illum veniam rerum voluptates
-            atque,
-            iste a?</p>
-          <p class="tools-used">SCSS · Parcel</p>
+          <div class="project-image-container"><a href="https://thrasymachuss.github.io/sudoku-v2/"><img
+                src="./images/sudoku.png" alt="Sudoku screenshot"></a></div>
+          <p class="project-description">This app generates random Sudoku puzzles through recursive backtracking, and
+            allows the user to solve the puzzles. It can also
+            visualize the solving algorithm.</p>
+          <p class="tools-used">Vanilla JS · Vite · SASS</p>
+          <p class="project-links"><a href="https://thrasymachuss.github.io/sudoku-v2/">Visit App</a> | <a
+              href="https://github.com/Thrasymachuss/sudoku-v2">Source Code</a></p>
         </div>
       </article>
       <article class="project hidden">
         <div class="project-inner">
           <div class="project-title-container">
-            <h3 class="project-title">This Website</h3>
+            <h3 class="project-title"><a href="https://thrasymachuss.github.io/logic-square/">LogicSquare</a></h3>
           </div>
-          <div class="project-image-container"><img src="./images/laptop.png" alt=""></div>
-          <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, ullam
-            velit. Fugit voluptatibus eius tenetur excepturi, ratione nemo, illum veniam rerum voluptates
-            atque,
-            iste a?</p>
-          <p class="tools-used">SCSS · Parcel</p>
+          <div class="project-image-container"><a href="https://thrasymachuss.github.io/logic-square/"><img
+                src="./images/logicSquare.png" alt="LogicSquare screenshot"></a></div>
+          <p class="project-description">A logic-based puzzle game of my own invention, comparable to Sudoku. Uses a
+            recursive backtracking algorithm to generate
+            random puzzles and solve them, much like my Sudoku app. Also offers a visualization of the algorithm.</p>
+          <p class="tools-used">React · Typescript</p>
+          <p class="project-links"><a href="https://thrasymachuss.github.io/logic-square/">Visit App</a> | <a
+              href="https://github.com/Thrasymachuss/logic-square">Source Code</a></p>
         </div>
       </article>
   </section>
@@ -132,6 +156,7 @@
         <input type="hidden" name="_captcha" value="false">
         <input name="name" class="form-control" placeholder="Name*" required>
         <input name="email" class="form-control" placeholder="Email*" required>
+        <input name="subject" class="form-control" placeholder="Subject">
         <textarea class="form-control" placeholder="Your Message...*" name="message" rows="10" required></textarea>
         <button class="contact-me-submit" type="submit">Submit Form</button>
       </form>

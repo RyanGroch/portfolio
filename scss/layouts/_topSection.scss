@@ -5,6 +5,7 @@
 :root {
   --titleFontSize: 2.5rem;
   --subtitleFontSize: 2rem;
+  --titlesFontWeight: 600;
 
   @include breakpoints.tiny {
     --titleFontSize: 3rem;
@@ -19,6 +20,7 @@
   @include breakpoints.medium {
     --titleFontSize: 6rem;
     --subtitleFontSize: 5rem;
+    --titlesFontWeight: 500;
   }
 
   @include breakpoints.large {
@@ -46,22 +48,31 @@
     .title {
       font-size: var(--titleFontSize);
       font-family: variables.$primaryFontStack;
-      font-weight: 500;
+      font-weight: var(--titlesFontWeight);
       color: variables.$primary;
       text-align: center;
-      text-shadow: 5px 5px 5px variables.$primary,
-        5px 5px 5px variables.$primary, 5px 5px #000;
+      text-shadow: 5px 5px 5px variables.$primary, 5px 5px #000;
+
+      @include breakpoints.medium {
+        text-shadow: 5px 5px 5px variables.$primary,
+          5px 5px 5px variables.$primary, 5px 5px #000;
+      }
+
       letter-spacing: 0.25ch;
       animation: blinkIn 5s linear;
     }
     .subtitle {
       font-size: var(--subtitleFontSize);
       font-family: variables.$primaryFontStack;
-      font-weight: 500;
+      font-weight: var(--titlesFontWeight);
       color: variables.$secondary;
       text-align: center;
-      text-shadow: 5px 5px 5px variables.$secondary,
-        5px 5px 5px variables.$secondary, 5px 5px #000;
+      text-shadow: 5px 5px 5px variables.$secondary, 5px 5px #000;
+
+      @include breakpoints.medium {
+        text-shadow: 5px 5px 5px variables.$secondary,
+          5px 5px 5px variables.$secondary, 5px 5px #000;
+      }
       letter-spacing: 0.25ch;
       animation: blinkIn 5s linear;
     }
