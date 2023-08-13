@@ -1,6 +1,6 @@
 # Portfolio
 
-This is simply my personal portfolio site, which contains a description of my web development skills and projects. You can visit the site [here](https://thrasymachuss.github.io/portfolio/).
+This is simply my personal portfolio site, which contains a description of my web development skills and projects. You can visit the site [here](https://ryan-groch.github.io/portfolio/).
 
 The site was created with vanilla Javascript, SCSS, and Vite as the build tool. The website [formsubmit.co](https://formsubmit.co/) handles the contact form.
 
