@@ -3,7 +3,7 @@ const navbarHeight = navbar.offsetHeight;
 let lastScrollTop;
 
 window.addEventListener("scroll", function () {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (scrollTop < navbarHeight) {
     navbar.classList.add("static");
     navbar.classList.remove("hidden");
